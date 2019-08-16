@@ -7,4 +7,6 @@ excerpt: Get up and running with a fresh macOS Mojave install
 ---
 #### My blog post
 
-Empty post
+Trying this super forestry.io stuff...
+
+Oh what fun!
