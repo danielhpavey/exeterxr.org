@@ -21,7 +21,7 @@
           </div>          
         </div>
 
-        <JournalContent :content="$page.post.content" />
+        <BlogContent :content="$page.post.content" />
 
       </div>
     </div>
@@ -29,8 +29,8 @@
 </template>
 
 <page-query>
-query JournalPost ($path: String!) {
-  post: journalPost (path: $path) {
+query BlogPost ($path: String!) {
+  post: blogPost (path: $path) {
     title
     author
     date (format: "D. MMMM YYYY")
@@ -41,11 +41,11 @@ query JournalPost ($path: String!) {
 </page-query>
 
 <script>
-import JournalContent from "@/components/JournalContent"
+import BlogContent from "@/components/BlogContent"
 
 export default {
   components: {
-    JournalContent
+    BlogContent
   },
   metaInfo () {
     return {

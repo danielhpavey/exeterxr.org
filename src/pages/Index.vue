@@ -1,33 +1,36 @@
 <template>
   <Layout>
-    <div class="container">
-      <Hero />
-      <ProjectsGrid :projects="$page.projects.edges" />
+
+    <div class="container container-home">
+      <div class="home-hero">
+        <h1 class="home-header">
+            Exeter XR
+        </h1>
+      </div>
     </div>
-    <LatestJournals :journals="$page.journals.edges" />
+
+    <div
+      v-for="item in $page.posts.edges" 
+      class="home-post"
+    >
+      <div class="container home">
+        <h2 class="home-title" v-html="item.node.title"></h2>
+        <div v-html="item.node.content"></div>
+      </div>
+    </div>
+      
   </Layout>
 </template>
 
 <page-query>
-query Posts {
-	projects: allProjectPost {
-    edges {
-      node {
-        id
-        date (format: "YYYY")
-        title
-        categories
-        thumbnail (quality: 90)
-        path
-      }
-    }
-  },
-  journals: allJournalPost (perPage: 4) {
+query HomeContent{
+	posts: allHomePost {
     edges {
       node {
         id
         path
         title
+        content
       }
     }
   }
@@ -35,15 +38,62 @@ query Posts {
 </page-query>
 
 <script>
-import Hero from "@/components/Hero"
-import ProjectsGrid from "@/components/ProjectsGrid"
-import LatestJournals from "@/components/LatestJournals"
+</script>
 
-export default {
-  components: {
-    Hero,
-    ProjectsGrid,
-    LatestJournals
+<style scoped>
+.container.home {
+    padding: 0 2rem;
+    max-width:720px;
+}
+.container-home {
+    padding: 0;
+    width:100%;
+    max-width:100%;
+}
+.home-hero {
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--color-base);
+  background: var(--color-base-title);
+}
+.home-header {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+.home-post {
+  display: block;
+  padding: 2rem 0;
+  text-decoration: none;
+  transition: background 0.5s ease;
+}
+.home-post > * {
+  transition: transform 0.5s ease;
+}
+
+.home-post h1,
+.home-post h2 {
+  margin: 0;
+  padding: 0;
+}
+.home-title {
+  font-size: 2rem;
+  color: var(--color-contrast);
+}
+.home-excerpt {
+  color: var(--color-contrast-1);
+}
+
+@media (min-width: 560px) {
+  .home-post {
+    padding: 3rem 0;
   }
 }
-</script>
+
+@media (min-width: 860px) {
+  .home-post {
+    padding: 5rem 0;
+  }
+}
+</style>

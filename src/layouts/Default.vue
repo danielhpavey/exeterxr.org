@@ -27,8 +27,10 @@ export default {
 body {
   --color-base: rgb(255, 255, 255);
   --color-base-1: rgb(243, 243, 243);
+  --color-base-title: rgb(33, 167, 61);
   --color-contrast: rgb(0, 0, 0);
   --color-contrast-1: rgb(43, 43, 43);
+  --default-padding: 1rem;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin:0;
   padding: 0;
@@ -51,10 +53,6 @@ h1 {
 
 .layout {
   padding: 0;
-}
-
-.layout.sticky-header {
-  padding: 6rem 0 0 0;
 }
 
 .container {
