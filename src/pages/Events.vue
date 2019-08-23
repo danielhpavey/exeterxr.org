@@ -24,7 +24,7 @@
 
 <page-query>
 query PagesContent{
-	posts: allPagePost(filter: { title: { eq: "Our Demands" }}) {
+	posts: allPagePost(filter: { title: { eq: "Events" }}) {
     edges {
       node {
         id
@@ -35,6 +35,7 @@ query PagesContent{
     }
   }
 }
+
 </page-query>
 
 <script>

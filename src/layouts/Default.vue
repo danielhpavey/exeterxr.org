@@ -28,13 +28,14 @@ body {
   --color-base: rgb(255, 255, 255);
   --color-base-1: rgb(243, 243, 243);
   --color-base-title: rgb(33, 167, 61);
-  --color-contrast: rgb(0, 0, 0);
+  --color-contrast: rgb(68, 68, 68);
   --color-contrast-1: rgb(43, 43, 43);
   --default-padding: 1rem;
+  --font-base: 18px;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin:0;
   padding: 0;
-  font-size: 16px;
+  font-size: var(--font-base);
   background: var(--color-base);
   color: var(--color-contrast);
   transition: background 0.5s ease;

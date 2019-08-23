@@ -22,7 +22,11 @@
                 <label for="hammy" class="menu-close">X</label>
                 <g-link class="nav__link" to="/">Home</g-link>
                 <g-link class="nav__link" to="/about">About</g-link>
+                <g-link class="nav__link" to="/events">Events</g-link>
+                <g-link class="nav__link" to="/skills">Lend your skills</g-link>
+                <g-link class="nav__link" to="/funds">Raise Funds</g-link>
                 <g-link class="nav__link" to="/blog">Blog</g-link>
+                <g-link class="nav__link" to="/newsletter">Newsletter</g-link>
                 <g-link class="nav__link" to="/contact">Contact Us</g-link>
             </nav>
         </div>
@@ -59,13 +63,6 @@ export default {
 .logo {
     height: 2.5rem;
 }
-.site-name {
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    text-transform: uppercase;   
-}
 
 .nav {
     position:fixed;
@@ -101,11 +98,11 @@ export default {
 }
 
 .nav > * {
-    font-size: 2rem;
+    font-size: calc(var(--font-base) * 2);
     font-weight: 600;
     text-decoration: none;
     margin-top: 4px;
-    margin-right: 3rem;
+    margin-right: 1.5rem;
     padding-bottom: 4px;
     border-bottom: 1px solid;
     border-color: transparent;
@@ -116,11 +113,11 @@ export default {
     margin-right: 0;
 }
 .nav > *:hover, .nav > *:active{
-    color: var(--color-base-title);
+    color: var(--color-contrast-1);
     padding-left: 1rem;
 }
 
-@media only screen and (min-width : 500px) {
+@media only screen and (min-width : 1000px) {
     .nav {
         position:relative;
         right: auto;
@@ -130,11 +127,10 @@ export default {
     }
 
     .nav > * {
-        font-size: 1rem;
+        font-size: var(--font-base);
     }
 
     .nav > *:hover, .nav > *:active{
-        color: var(--color-base-title);
         padding-left: 0;
     }
 
