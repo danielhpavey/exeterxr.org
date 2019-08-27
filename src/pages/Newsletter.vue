@@ -1,11 +1,9 @@
 <template>
   <Layout>
 
-    <div class="container container-home">
-      <div class="home-hero">
-        <h1 class="home-header">
-            Exeter XR
-        </h1>
+    <div class="container hero">
+      <div class="header">
+        <h1 class="">newsletter</h1>
       </div>
     </div>
 
@@ -84,6 +82,10 @@ query PagesContent{
 }
 .home-excerpt {
   color: var(--color-contrast-1);
+}
+
+.hero .header h1 {
+    font-size: 4rem;
 }
 
 @media (min-width: 560px) {

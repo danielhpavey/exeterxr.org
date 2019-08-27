@@ -1,11 +1,9 @@
 <template>
   <Layout>
 
-    <div class="container container-home">
-      <div class="home-hero">
-        <h1 class="home-header">
-            Exeter XR
-        </h1>
+    <div class="container hero">
+      <div class="header">
+        <h1 class="">about us</h1>
       </div>
     </div>
 
@@ -17,6 +15,7 @@
         <h2 class="home-title" v-html="item.node.title"></h2>
         <div v-html="item.node.content"></div>
       </div>
+    </div>
     </div>
       
   </Layout>
@@ -42,6 +41,14 @@ query PagesContent{
 </script>
 
 <style scoped>
+.contact-header {
+  padding: 2rem 0 4rem 0;
+}
+.contact-title {
+  font-size: 4rem;
+  margin: 0 0 4rem 0;
+  padding: 0;
+}
 .container.home {
     padding: 0 2rem;
     max-width:720px;
@@ -84,6 +91,10 @@ query PagesContent{
 }
 .home-excerpt {
   color: var(--color-contrast-1);
+}
+
+.hero .header h1 {
+    font-size: 4rem;
 }
 
 @media (min-width: 560px) {

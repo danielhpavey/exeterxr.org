@@ -4,7 +4,7 @@
     <div class="container container-home">
       <div class="home-hero">
         <h1 class="home-header">
-            Exeter XR
+            Exeter Extinction Rebellion
         </h1>
       </div>
     </div>
@@ -59,7 +59,7 @@ query PagesContent{
 .home-header {
   font-size: 3rem;
   font-weight: 700;
-  padding: 0;
+  padding: 0 1rem;
   margin: 0;
 }
 .home-post {
