@@ -11,7 +11,7 @@
     <ul v-if="posts">
     <li v-for="post of posts.data">
       <p><strong>{{ post.name }}</strong></p>
-      <p><strong>{{ post.start_time}}</strong></p>
+      <p><strong>{{ post.start_time | formatDate }}</strong></p>
       <p>{{post.description}}</p>
     </li>
   </ul>
