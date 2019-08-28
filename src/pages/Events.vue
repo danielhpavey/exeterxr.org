@@ -1,42 +1,58 @@
 <template>
   <Layout>
-
     <div class="container hero">
       <div class="header">
         <h1 class="">events</h1>
       </div>
     </div>
 
-    <div
-      v-for="item in $page.posts.edges" 
-      class="home-post"
-    >
+    <div class="home-post">
       <div class="container home">
-        <h2 class="home-title" v-html="item.node.title"></h2>
-        <div v-html="item.node.content"></div>
+    <ul v-if="posts">
+    <li v-for="post of posts.data">
+      <p><strong>{{ post.name }}</strong></p>
+      <p><strong>{{ post.start_time}}</strong></p>
+      <p>{{post.description}}</p>
+    </li>
+  </ul>
+
+  <ul v-if="errors && errors.length">
+    <li v-for="error of errors">
+      {{error.message}}
+    </li>
+  </ul>
       </div>
-    </div>
+  </div>
+
       
   </Layout>
 </template>
 
 <page-query>
-query PagesContent{
-	posts: allPagePost(filter: { title: { eq: "Events" }}) {
-    edges {
-      node {
-        id
-        path
-        title
-        content
-      }
-    }
-  }
-}
-
 </page-query>
-
 <script>
+  import axios from 'axios';
+  export default {
+  data() {
+    return {
+      posts:  [],
+      errors: []
+    }
+  },
+
+   created() {
+    axios.get(`https://graph.facebook.com/v4.0/ExtinctionRebellion/events?access_token=EAAAAGGZA8EFcBAKondn6vVIa1PemOhZADzKqOCWHtCRsnyrdU5VZAyKMKxdxwE50i8tyDmuJSA8WhEtro4lfI2rk5ej9KHzeIw5HeMNl5FO9jxwOVNpL3UZC0LRaGNbIqoUkjJZB9kxghZASVL7eGCvFdgkXcfl7KrfwH3DXKpqJJ7RBZCnIi7lHLR9irZCzZArIZD`)
+    .then(response => {
+      // JSON responses are automatically parsed.
+      this.posts = response.data
+        window.posts = response.data
+    })
+    .catch(e => {
+      this.errors.push(e)
+    })
+
+  }
+  }
 </script>
 
 <style scoped>
