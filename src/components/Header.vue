@@ -13,7 +13,7 @@
             <label for="hammy" class="hammy">
                 <img 
                     src="../../static/hammy.svg"
-                    :alt="Menu" 
+                    alt="Menu" 
                     class="logo"
                 />
             </label>
