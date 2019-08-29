@@ -2,7 +2,7 @@
 date: 2019-08-29 19:00
 title: Intro to XR talk
 author: Nichlas W. Andersen
-excerpt: Get up and running with a fresh macOS Mojave install
+excerpt: Find out what Extinction Rebellion is all about.
 location: CICCIC TA1 3PF Taunton, Somerset
 
 ---
