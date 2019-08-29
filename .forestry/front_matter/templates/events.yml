@@ -24,14 +24,22 @@ fields:
     export_format: YYYY-MM-DD
   default: now
 - type: select
-  name: author
+  name: location
   config:
     source:
       type: simple
       section: authors
       file: data/authors/nichlas-w-andersen.json
     required: true
-    options:
-    - Nichlas W. Andersen
-  label: Author
-  default: Nichlas W. Andersen
+    options: []
+  default: ''
+  label: Location
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
