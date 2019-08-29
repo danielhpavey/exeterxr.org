@@ -1,5 +1,5 @@
 ---
-label: Project
+label: Pages
 hide_body: false
 fields:
 - type: file
@@ -22,21 +22,3 @@ fields:
     display_utc: true
   default: now
   hidden: true
-- type: tag_list
-  name: categories
-  label: Categories
-- type: color
-  name: project_bg_color
-  config:
-    color_format: Hex
-  label: Background color
-- type: color
-  name: project_fg_color
-  config:
-    color_format: Hex
-  label: Foreground color
-pages:
-- projects/3d-graff.md
-- projects/ios-concept.md
-- projects/sunk.md
-- projects/chelsea-landmark.md

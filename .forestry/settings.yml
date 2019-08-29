@@ -10,14 +10,21 @@ sections:
   create: documents
   match: "**/*.md"
   templates:
-  - project
+  - pages
 - type: directory
   path: blog
   label: Blog
   create: documents
   match: "**/*.md"
   templates:
-  - journal
+  - blog
+- type: directory
+  path: events
+  label: events
+  create: documents
+  match: "**/*.md"
+  templates:
+  - events
 - type: document
   path: data/theme.json
   label: Theme config

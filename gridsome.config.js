@@ -23,6 +23,18 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
+        path: "events/**/*.md",
+        typeName: "EventPost",
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+        }
+      }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
         path: "pages/**/*.md",
         typeName: "PagePost",
         resolveAbsolutePaths: true,

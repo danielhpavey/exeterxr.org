@@ -1,5 +1,5 @@
 ---
-label: Journal
+label: Events
 hide_body: false
 fields:
 - type: text
@@ -35,6 +35,3 @@ fields:
     - Nichlas W. Andersen
   label: Author
   default: Nichlas W. Andersen
-pages:
-- journal/this-is-my-new-super-joual.md
-- journal/macos-development-environment.md
