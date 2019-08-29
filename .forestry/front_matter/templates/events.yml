@@ -28,3 +28,5 @@ fields:
     time_format: H:mm
     export_format: YYYY-MM-DD H:mm
   default: now
+pages:
+- events/regenerative-evening-of-gentle-yoga.md
