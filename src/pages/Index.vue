@@ -1,10 +1,17 @@
 <template>
   <Layout>
 
-    <div class="container container-home">
-      <div class="home-hero">
-        <h1 class="home-header">
-            Exeter Extinction Rebellion
+    <!-- <div class="container container&#45;home"> -->
+    <!--   <div class="home&#45;hero"> -->
+    <!--     <h1 class="home&#45;header"> -->
+    <!--         Exeter Extinction Rebellion -->
+    <!--     </h1> -->
+    <!--   </div> -->
+    <!-- </div> -->
+    <div class="container hero">
+      <div class="header">
+        <h1 class="">
+            exeter extinction rebellion
         </h1>
       </div>
     </div>
@@ -70,6 +77,10 @@ query PagesContent{
 }
 .home-post > * {
   transition: transform 0.5s ease;
+}
+
+.hero .header h1 {
+    font-size: 4rem;
 }
 
 .home-post h1,

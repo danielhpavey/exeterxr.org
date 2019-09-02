@@ -1,11 +1,9 @@
 <template>
   <Layout>
 
-    <div class="container">
-      <div class="blog-hero">
-        <h1 class="blog-header">
-          a wise person once said...
-        </h1>
+    <div class="container hero">
+      <div class="header">
+        <h1 class="">blog</h1>
       </div>
     </div>
 
@@ -71,9 +69,6 @@ export default {
 .blog-post:hover {
   background-color: var(--color-base-1);
 }
-.blog-post:hover > * {
-  transform: translateX(4rem);
-}
 .blog-post h1,
 .blog-post h2 {
   margin: 0;
@@ -91,6 +86,10 @@ export default {
   .blog-post {
     padding: 3rem 0;
   }
+}
+
+.hero .header h1 {
+    font-size: 4rem;
 }
 
 @media (min-width: 860px) {

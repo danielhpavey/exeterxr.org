@@ -1,22 +1,22 @@
 <template>
   <Layout>
     <div class="journal">
+        <div class="container hero">
+          <div class="header">
+            <h1 v-html="$page.post.title" class="journal-title" />
+          </div>
+        </div>
       <div class="container journal-container">
 
         <div class="journal-header">
-          <h1 v-html="$page.post.title" class="journal-title" />
           <div class="journal-meta">
-            <div class="journal-author">
-              <span class="label">Author</span>
-              <span class="author-name" v-text="$page.post.author" />
-            </div>
             <div class="journal-date">
               <span class="label">Date</span>
-              <div v-text="$page.post.date"/>
+              <span>{{ $page.post.date | formatPrettyDate }}</span>
             </div>
             <div class="journal-time">
               <span class="label">Time</span>
-              <span>{{ $page.post.timeToRead }} min read</span>
+              <span>{{ $page.post.date | formatTime }}</span>
             </div>
           </div>          
         </div>
@@ -33,7 +33,7 @@ query EventPost ($path: String!) {
   post: eventPost (path: $path) {
     title
     author
-    timeToRead
+    date
     content
   }
 }
@@ -41,6 +41,7 @@ query EventPost ($path: String!) {
 
 <script>
 import BlogContent from "@/components/BlogContent"
+import moment from 'moment'
 
 export default {
   components: {
@@ -50,6 +51,11 @@ export default {
     return {
       title: this.$page.post.title
     }
+  },
+  methods: {
+      moment: function () {
+        return moment();
+      }
   }
 }
 </script>
@@ -61,15 +67,9 @@ export default {
 .journal-header {
   padding: 2rem 0 4rem 0;
 }
-.journal-title {
-  font-size: 4rem;
-  margin: 0 0 4rem 0;
-  padding: 0;
-}
 .journal-meta {
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.8rem;
 }
 .journal-meta > div {
   margin-right: 4rem;

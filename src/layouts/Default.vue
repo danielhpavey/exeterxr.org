@@ -137,4 +137,8 @@ img {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+
+.hero .header h1 {
+    font-size: 4rem;
+}
 </style>

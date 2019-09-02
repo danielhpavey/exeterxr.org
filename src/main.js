@@ -19,3 +19,15 @@ Vue.filter('formatDate', function(value) {
     return moment(String(value)).format('MM/DD/YYYY hh:mm')
   }
 });
+
+Vue.filter('formatPrettyDate', function(value) {
+  if (value) {
+    return moment(String(value)).format('dddd Do MMMM YYYY')
+  }
+});
+
+Vue.filter('formatTime', function(value) {
+  if (value) {
+    return moment(String(value)).format('h:mm a')
+  }
+});
