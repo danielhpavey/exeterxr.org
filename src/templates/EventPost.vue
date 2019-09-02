@@ -33,7 +33,6 @@ query EventPost ($path: String!) {
   post: eventPost (path: $path) {
     title
     author
-    date (format: "D. MMMM YYYY")
     timeToRead
     content
   }
