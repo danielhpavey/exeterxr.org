@@ -2,10 +2,6 @@
 label: Pages
 hide_body: false
 fields:
-- type: file
-  name: thumbnail
-  label: Thumbnail
-  description: This will only show up on the front page
 - type: text
   name: title
   label: Title
@@ -22,3 +18,8 @@ fields:
     display_utc: true
   default: now
   hidden: true
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
