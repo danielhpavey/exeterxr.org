@@ -85,6 +85,44 @@ export default {
     right: 0;
 }
 
+.nav .nav__link {
+    margin-left: 100%;
+}
+
+#hammy:checked ~ .nav .nav__link {
+    transition: margin-left 0.5s ease;
+    margin-left: 0;
+}
+
+#hammy:checked ~ .nav .nav__link:nth-child(2) {
+    transition: margin-left 0.6s ease;
+}
+
+#hammy:checked ~ .nav .nav__link:nth-child(3) {
+    transition: margin-left 0.7s ease;
+}
+
+#hammy:checked ~ .nav .nav__link:nth-child(4) {
+    transition: margin-left 0.8s ease;
+}
+
+#hammy:checked ~ .nav .nav__link:nth-child(5) {
+    transition: margin-left 0.9s ease;
+}
+
+#hammy:checked ~ .nav .nav__link:nth-child(6) {
+    transition: margin-left 1.0s ease;
+}
+#hammy:checked ~ .nav .nav__link:nth-child(7) {
+    transition: margin-left 1.1s ease;
+}
+#hammy:checked ~ .nav .nav__link:nth-child(8) {
+    transition: margin-left 1.2s ease;
+}
+#hammy:checked ~ .nav .nav__link:nth-child(9) {
+    transition: margin-left 1.3s ease;
+}
+
 .hammy:hover{
     cursor: pointer;
 }
