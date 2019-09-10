@@ -1,6 +1,5 @@
 <template>
   <Layout>
-
     <div class="container hero">
       <div class="header">
         <h1 class="">about us</h1>
@@ -12,6 +11,9 @@
       class="home-post"
     >
       <div class="container home">
+        <div v-if="item.node.image">
+            <g-image :src="item.node.image"/>
+        </div>
         <h2 class="home-title" v-html="item.node.title"></h2>
         <div v-html="item.node.content"></div>
       </div>
@@ -30,6 +32,7 @@ query PagesContent{
         path
         title
         content
+        image
       }
     }
   }

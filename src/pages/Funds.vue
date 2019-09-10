@@ -11,6 +11,9 @@
       v-for="item in $page.posts.edges" 
       class="home-post"
     >
+    <div v-if="item.node.image">
+        <g-image :src="item.node.image"/>
+    </div>
       <div class="container home">
         <h2 class="home-title" v-html="item.node.title"></h2>
         <div v-html="item.node.content"></div>
@@ -29,6 +32,7 @@ query PagesContent{
         path
         title
         content
+        image
       }
     }
   }

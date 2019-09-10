@@ -12,8 +12,8 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         path: "blog/**/*.md",
-        typeName: "BlogPost",
         resolveAbsolutePaths: true,
+        typeName: "BlogPost",
         remark: {
           externalLinksTarget: "_blank",
           externalLinksRel: ["nofollow", "noopener", "noreferrer"]
@@ -24,8 +24,8 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         path: "events/**/*.md",
-        typeName: "EventPost",
         resolveAbsolutePaths: true,
+        typeName: "EventPost",
         remark: {
           externalLinksTarget: "_blank",
           externalLinksRel: ["nofollow", "noopener", "noreferrer"]
@@ -37,7 +37,6 @@ module.exports = {
       options: {
         path: "pages/**/*.md",
         typeName: "PagePost",
-        resolveAbsolutePaths: true,
         remark: {
           externalLinksTarget: "_blank",
           externalLinksRel: ["nofollow", "noopener", "noreferrer"]

@@ -141,4 +141,9 @@ img {
 .hero .header h1 {
     font-size: 4rem;
 }
+
+.g-image {
+    width:33%;
+    float:right;
+}
 </style>
