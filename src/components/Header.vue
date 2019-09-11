@@ -175,5 +175,8 @@ export default {
     .hammy, .menu-close {
         display:none;
     }
+    .nav .nav__link {
+        margin-left:0;
+    }
 }
 </style>

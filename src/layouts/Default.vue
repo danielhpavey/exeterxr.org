@@ -86,6 +86,7 @@ body {
   --color-base-title: rgb(33, 167, 61);
   --color-contrast: rgb(68, 68, 68);
   --color-contrast-1: rgb(43, 43, 43);
+  --color-xr: rgb(20, 170, 55);
   --default-padding: 1rem;
   --font-base: 18px;
   font-family: system-ui;
