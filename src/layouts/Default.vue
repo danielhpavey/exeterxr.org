@@ -89,6 +89,8 @@ body {
   --default-padding: 1rem;
   --font-base: 18px;
   font-family: system-ui;
+  //font-family: 'Crimson Text', serif;
+  line-height: 1.6em;
   margin:0;
   padding: 0;
   font-size: var(--font-base);
@@ -102,6 +104,11 @@ body.dark {
   --color-base-1: rgb(43, 43, 43);
   --color-contrast: rgb(255, 255, 255);
   --color-contrast-1: rgb(243, 243, 243);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Crimson Text', serif;
+    line-height:1em;
 }
 
 h1 {

@@ -6,6 +6,10 @@ export default function(Vue, { head }) {
   head.bodyAttrs = {
     class: settings.dark_mode ? "dark" : ""
   };
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Crimson+Text&display=swap'
+  });
 }
 
 import Vue from 'vue'
