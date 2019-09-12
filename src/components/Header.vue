@@ -77,6 +77,7 @@ export default {
     padding: var(--default-padding);
 }
 
+
 #hammy {
     display:none;
 }
@@ -87,6 +88,9 @@ export default {
 
 .nav .nav__link {
     margin-left: 100%;
+    overflow:hidden;
+    white-space: nowrap;
+    line-height:1.4em;
 }
 
 #hammy:checked ~ .nav .nav__link {
