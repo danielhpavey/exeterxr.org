@@ -108,7 +108,7 @@ body.dark {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Crimson Text', serif, system-ui;
     line-height:1em;
 }
 
