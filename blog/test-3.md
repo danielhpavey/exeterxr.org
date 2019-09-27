@@ -11,3 +11,7 @@ file: "/uploads/XR-design programme-v1.1.pdf"
 Trying this super forestry.io stuff...
 
 Oh what fun!
+
+[XR-design programme-v1.1.pdf](/uploads/XR-design programme-v1.1.pdf "XR-design programme-v1.1.pdf")
+
+[XR-logotype-4col-Black-Stacked.eps](/uploads/XR-logotype-4col-Black-Stacked.eps "XR-logotype-4col-Black-Stacked.eps")
