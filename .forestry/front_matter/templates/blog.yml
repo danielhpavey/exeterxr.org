@@ -1,5 +1,5 @@
 ---
-label: Journal
+label: Blog
 hide_body: false
 fields:
 - type: text
@@ -35,3 +35,8 @@ fields:
     - Nichlas W. Andersen
   label: Author
   default: Nichlas W. Andersen
+- name: file
+  type: file
+  config:
+    maxSize: 250
+  label: File
