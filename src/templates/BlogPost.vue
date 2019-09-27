@@ -10,18 +10,10 @@
 
         <div class="journal-header">
           <div class="journal-meta">
-            <!-- <div class="journal&#45;author"> -->
-            <!--   <span class="label">Author</span> -->
-            <!--   <span class="author&#45;name" v&#45;text="$page.post.author" /> -->
-            <!-- </div> -->
             <div class="journal-date">
-              <span class="label">Date</span>
+              <span class="label">Date </span>
               <span>{{ $page.post.date | formatPrettyDate }} </span>
             </div>
-            <!-- <div class="journal&#45;time"> -->
-            <!--   <span class="label">Time</span> -->
-            <!--   <span>{{ $page.post.timeToRead }} min read</span> -->
-            <!-- </div> -->
           </div>          
         </div>
 
@@ -37,7 +29,7 @@ query BlogPost ($path: String!) {
   post: blogPost (path: $path) {
     title
     author
-    date (format: "D. MMMM YYYY")
+    date (format: "D MMMM YYYY")
     timeToRead
     content
   }

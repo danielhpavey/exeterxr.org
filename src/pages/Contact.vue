@@ -4,11 +4,19 @@
 
       <div class="contact-header">
         <h1 class="contact-title">say hi!</h1>
-        <p>Leave me a note with any questions you might have, I'll get back to you as soon as possible.</p>
+        <p>Leave a note with any questions you might have, We'll get back to you as soon as possible.</p>
       </div>
 
-      <form class="contact-form" name="contact">
-
+      <form class="contact-form" 
+          name="contact"
+          action="https://formstatic.dev" 
+            method="post"
+          >
+        <input type="hidden" name="$processor" value="email">
+        <input type="hidden" name="$to" value="danielhpavey@gmail.com">
+        <input type="hidden" name="$reply_to" value="info@exeterxr.org">
+        <input type="hidden" name="$subject" value="Contact Form Enquiry">
+        <input type="hidden" name="$redirect_to" :value="$url('/contact')">
         <div class="sender-info">
           <div>
             <label for="name" class="label">Your name</label>
@@ -34,10 +42,18 @@
 </template>
 
 <script>
-export default {}
+export default {
+    // function currentUrl(){
+    //  const currentUrl = window.location.href;
+    //     console.log(currentUrl)
+    // }
+}
 </script>
 
 <style scoped>
+form{
+    margin-bottom: var(--default-padding);
+}
 .contact-header {
   padding: 2rem 0 4rem 0;
 }
