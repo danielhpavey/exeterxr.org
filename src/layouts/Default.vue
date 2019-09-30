@@ -116,8 +116,11 @@ h1 {
   letter-spacing: -0.01em;
 }
 
-.layout {
+.layout { 
+    position:relative;
   padding: 0;
+  min-height: 100vh;
+  padding-bottom: 500px;
 }
 
 .container {

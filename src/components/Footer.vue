@@ -25,6 +25,11 @@ export default {
     font-size: 0.8rem;
     padding: 6rem 0;
     background: var(--color-xr);
+    position:absolute;
+    width:100%;
+    bottom:0;
+    height: 500px;
+    z-index: -1;
 }
 .xr-logo {
     width:100%;
